@@ -1,0 +1,60 @@
+<div class="w3-row">
+<div class="w3-col w3-card-4" style="width:39%">
+{{product_message}}
+<div class="w3-container w3-theme">
+	<h3>Add Product Information</h3>
+</div>
+
+
+<form class="w3-container w3-theme-l5">
+
+<p>
+<label>Product ID</label>
+<input class="w3-input w3-border" name="id" type="text" ng-model="product.id"></p>
+
+<p>
+<label>Product Name</label>
+<input class="w3-input w3-border" name="name" type="text" ng-model="product.name"></p>
+
+
+<p>
+<label>Product description</label>
+<input class="w3-input w3-border" name="description" type="text" ng-model="product.description"></p>
+
+<p class="w3-right">
+<input class="w3-btn w3-round-xxlarge w3-theme w3-border" name="btnAdd" type="button" value="Save" ng-click="addProduct()"></p>
+
+<p class="w3-right">
+<input class="w3-btn w3-round-xxlarge w3-theme w3-border" name="btnClear" type="button" value="Clear" ng-click="resetControls()"></p>
+</form>
+
+</div>
+
+<div class="w3-col" style="width:2%">
+	&nbsp
+</div>
+
+<div class="w3-col w3-card-4" style="width:59%">
+	<div class="w3-container w3-theme">
+	<h3>Products List</h3>
+	</div>
+	<div class="w3-container w3-theme-l5" style="width:100%;height:300px;overflow-y:scroll">
+		<div class="w3-container" ng-repeat="product in products">
+			&nbsp
+			<div class="w3-row w3-container w3-card-4 w3-theme-l4">
+
+				<div class="w3-container l5">
+					&nbsp 
+					<div class="w3-row"><h4 class="w3-medium">
+					Product ID : <b>{{product.id}}</b></h4></div>
+					<div class="w3-row"><h4 class="w3-medium">Product Name : <b>{{product.name}}</b></h4></div>
+					<div class="w3-row"><h4 class="w3-medium">Product Description : <b>{{product.description}}</b></h4></div>
+				</div>	
+				&nbsp
+				</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+</div>
